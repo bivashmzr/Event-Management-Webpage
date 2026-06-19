@@ -1,5 +1,5 @@
 import React from 'react'
-import image2 from "../assets/Image/img 2.png"
+import image2 from "../assets/Image/image2.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsersRays } from '@fortawesome/free-solid-svg-icons'
 

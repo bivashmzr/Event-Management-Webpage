@@ -1,5 +1,5 @@
 import React from "react";
-import img4 from "../assets/Image/img 4.png";
+import img4 from "../assets/Image/image4.png";
 import Navbar from "../Component/Navbar";
 import { IoCallOutline } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";

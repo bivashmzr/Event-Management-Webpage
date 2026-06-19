@@ -1,5 +1,5 @@
 import React from 'react'
-import img3 from '../assets/Image/img 3.png'
+import img3 from '../assets/Image/image3.png'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
 import { TbCategoryFilled } from "react-icons/tb";

@@ -6,7 +6,7 @@ import { LuCalendarSearch } from "react-icons/lu";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentDots } from "@fortawesome/free-solid-svg-icons";
-import image1 from "../assets/Image/image 1.png";
+import image1 from "../assets/Image/image1.png";
 import { IoTicketOutline } from "react-icons/io5";
 import { MdLockOutline } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";

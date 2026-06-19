@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Cards from "./Cards";
 import { eventsData } from "./EventsDatas";
 import { IoLocationOutline, IoSearch } from "react-icons/io5";
-import img5 from "../assets/Image/img5.png";
+import img5 from "../assets/Image/image5.png";
 import {
   BsCalendar2Week,
   BsCalendar4Event,

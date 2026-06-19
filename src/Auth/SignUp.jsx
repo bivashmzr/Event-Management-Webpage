@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img7 from "../assets/Image/img 7.png";
+import img7 from "../assets/Image/image7.png";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
