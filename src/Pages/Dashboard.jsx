@@ -1,7 +1,7 @@
 import React from "react";
 import StatCard from "../Component/StatCard.jsx";
 import EventOverview from "../Component/EventOverview.jsx";
-import BookingSummary from "../component/BookingSummary.jsx";
+import BookingSummary from "../Component/BookingSummary.jsx";
 
 import { FiCalendar, FiUsers } from "react-icons/fi";
 import { MdCurrencyRupee } from "react-icons/md";
