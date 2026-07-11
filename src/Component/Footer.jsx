@@ -2,8 +2,6 @@ import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
-import { FaGooglePlay } from "react-icons/fa";
 import img14 from "../assets/Image/image14.png";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { faScissors } from "@fortawesome/free-solid-svg-icons";
@@ -103,37 +101,10 @@ const Footer = () => {
               </span>
             </div>
             <div>
-              <p className="text-[16px] font-bold">Download App</p>
-              <div className="w-full py-2 flex gap-2 ">
-                <div className="border border-gray-400 flex gap-2 leading-4 p-1 rounded-[5px] justify-center px-2">
-                  <span className="flex items-center">
-                    <FaApple size={25} />
-                  </span>
-                  <div className="flex flex-col ">
-                    <p className="text-[10px] text-gray-700 font-semibold">
-                      Download on the{" "}
-                    </p>
-                    <span className="text-[13px] text-gray-600 font-bold">
-                      App Store
-                    </span>
-                  </div>
-                </div>
-
-                {/* Android Application */}
-                <div className="border flex gap-2 py-1 border-gray-400 leading-4 p-1 rounded-[5px] justify-center px-2">
-                  <span className="flex items-center">
-                    <FaGooglePlay size={23} />
-                  </span>
-                  <div className="flex flex-col ">
-                    <p className="text-[10px] text-gray-700 font-semibold">
-                      Download on the{" "}
-                    </p>
-                    <span className="text-[13px] text-gray-600 font-bold">
-                      Play Store
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <p className="text-[16px] font-bold">Mobile App</p>
+              <p className="text-[13px] text-gray-500 font-medium pt-1">
+                Coming soon — web demo only for now.
+              </p>
             </div>
           </div>
         </div>

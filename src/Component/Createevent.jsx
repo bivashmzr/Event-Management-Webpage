@@ -18,8 +18,8 @@ const Createevent = () => {
     },
     {
       icon: <MdVerifiedUser />,
-      title: "Verified Organizers",
-      caption: "All organizers are verified and trusted.",
+      title: "Experienced Organizers",
+      caption: "Browse events from active community organizers.",
       bg: "bg-[#CEF2E4] ",
       border: "border-l-3 border-[#00A63E] ",
       color: "text-green-600  rounded-full w-max p-2 h-max",

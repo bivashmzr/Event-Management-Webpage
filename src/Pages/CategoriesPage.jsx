@@ -68,7 +68,7 @@ const CategoriesPage = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto lg:mt-20 md:mt-20 mt-25 border-[#FBFAFC]  ">
+      <div className="max-w-7xl mx-auto lg:mt-15 md:mt-10 mt-8 border-[#FBFAFC]  ">
         <div className="hidden md:block">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 md:items-center items-start lg:mt-4   px-5">
             <div className="gap-1 flex flex-col lg:mt-0 md:mt-0 mt-4 ">

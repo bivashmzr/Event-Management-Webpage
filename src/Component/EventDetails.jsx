@@ -11,16 +11,8 @@ import { BiSupport } from "react-icons/bi";
 import { FaRegClock, FaRegStar } from "react-icons/fa6";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { RiVipCrownLine } from "react-icons/ri";
-import { MdOutlineVerifiedUser } from "react-icons/md";
-import { LuUser } from "react-icons/lu";
-import { RiBankLine } from "react-icons/ri";
 import { LuLockKeyhole } from "react-icons/lu";
 import { BiErrorCircle } from "react-icons/bi";
-import { GiSmartphone } from "react-icons/gi";
-import { MdOutlineMail } from "react-icons/md";
-import { SlPhone } from "react-icons/sl";
-import { IoCardOutline } from "react-icons/io5";
-import { LiaWalletSolid } from "react-icons/lia";
 
 import {
   FaArrowRight,
@@ -271,9 +263,9 @@ const EventDetails = () => {
                   >
                     Book Now
                   </button>
-                  <span className="flex items-center gap-1 justify-center text-[12px] py-1">
+                  <span className="flex items-center gap-1 justify-center text-[12px] py-1 text-gray-500">
                     <GoShieldCheck />
-                    <p>100% Secure Checkout</p>
+                    <p>Demo booking preview</p>
                   </span>
 
                   {/* button onclick modal */}
@@ -515,117 +507,32 @@ const EventDetails = () => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="flex gap-3 pt-5 pb-4 items-center">
-                                <h3 className="font-bold">2. Your Details</h3>
-                                <p className="flex items-center gap-1 text-[14px]">
-                                  <GoShieldCheck color="#5043E0" />
-                                  Your information is secure
+                              <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                                <p className="font-semibold">Demo booking flow</p>
+                                <p className="pt-1 text-amber-800">
+                                  This is a student project preview. Ticket
+                                  selection is shown for UI demo only — no
+                                  personal details or payments are collected.
                                 </p>
                               </div>
-                              <div className="flex lg:flex-row md:flex-row flex-col    gap-3 px-2 w-full justify-between">
-                                <div className="flex flex-col  gap-1">
-                                  <p className="font-semibold text-[13px]">
-                                    Full Name
+
+                              <div className="border border-gray-300 rounded-xl w-full p-3 px-4 flex flex-col gap-3 mt-4">
+                                <div>
+                                  <p className="md:text-[16px] text-[13px] font-bold">
+                                    Preview complete
                                   </p>
-                                  <div className="flex items-center gap-1 border lg:w-40 md:w-40 w-full px-2 p-3 border-gray-300 rounded-md">
-                                    <LuUser />
-                                    <input
-                                      type="text"
-                                      placeholder="Enter Name"
-                                      className="text-[12px] outline-0 w-full"
-                                    />
-                                  </div>
-                                </div>
-                                <div className="flex flex-col gap-1">
-                                  <p className="font-semibold text-[13px]">
-                                    Phone Number
+                                  <p className="font-medium text-[10px] text-gray-500">
+                                    Close this window to continue browsing events
                                   </p>
-                                  <div className="flex items-center gap-1 border lg:w-40 md:w-40 w-full px-2 p-3 border-gray-300 rounded-md">
-                                    <SlPhone />
-                                    <input
-                                      type="number"
-                                      placeholder="Enter Number"
-                                      className="text-[12px] outline-0 w-full"
-                                    />
-                                  </div>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                  <p className="font-semibold text-[13px]">
-                                    Email
-                                  </p>
-                                  <div className="flex items-center gap-1 border lg:w-40 md:w-40 w-full px-2 p-3 border-gray-300 rounded-md">
-                                    <MdOutlineMail />
-                                    <input
-                                      type="text"
-                                      placeholder="Enter Email"
-                                      className="text-[12px] outline-0 w-full"
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div>
-                                <h3 className="font-bold py-3">
-                                  3. Payment Details
-                                </h3>
-                                <div className="flex lg:flex-row md:flex-row gap-2 flex-col  ">
-                                  <div className="flex border-gray-300 items-center gap-1 border w-40 justify-center p-3 rounded-xl hover:border-[#8576F1] hover:bg-[#F1F0FA] hover:text-[#8576F1]">
-                                    <IoCardOutline />
-                                    <p className="text-[13px]">UPI/Cards</p>
-                                  </div>
-                                  <div className="flex border-gray-300 items-center gap-1 border w-40 justify-center p-3 rounded-xl hover:border-[#8576F1] hover:bg-[#F1F0FA] hover:text-[#8576F1]">
-                                    <RiBankLine />
-
-                                    <p className="text-[13px]">Net Banking</p>
-                                  </div>
-                                  <div className="flex border-gray-300 items-center gap-1 border w-40 justify-center p-3 rounded-xl hover:border-[#8576F1] hover:bg-[#F1F0FA] hover:text-[#8576F1]">
-                                    <LiaWalletSolid />
-                                    <p className="text-[13px]">Wallets</p>
-                                  </div>
-                                </div>
-
-                                <div className="py-3 border-gray-200 border rounded-xl px-3 mt-3 bg-gray-100 flex items-center gap-3">
-                                  <div className="border border-gray-300 bg-white p-1.5 items-center flex justify-center rounded-full">
-                                    <GoShieldCheck
-                                      color="green"
-                                      className="text-[10px] md:text-[14px] lg:text-[14px]"
-                                    />
-                                  </div>
-                                  <div className="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center justify-between w-full lg:px-3 md:px-3">
-                                    <p className="text-gray-500 text-[12px] lg:text-[13px]">
-                                      Demo checkout — payment integration coming
-                                      soon. No card details are collected here.
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div className="border border-gray-300 rounded-xl w-full p-3 px-4 flex lg:flex-row md:flex-row flex-col justify-between mt-3">
-                                  <div className="flex gap-2 items-center ">
-                                    <div className="bg-[#E9E5FB] w-9 h-9  items-center flex justify-center rounded-full">
-                                      <GoShieldCheck className="text-[#5843E7] text-[17px]" />
-                                    </div>
-                                    <div>
-                                      <p className="md:text-[16px] text-[13px] font-bold">
-                                        Demo Booking
-                                      </p>
-                                      <p className="font-medium md-text[13px] text-[10px]">
-                                        Preview only — you will not be charged
-                                      </p>
-                                    </div>
-                                  </div>
-                                  <div className="flex flex-col pt-4 md:pt-0 gap-1">
-                                    <button
-                                      type="button"
-                                      className="bg-blue-700 p-2 flex gap-2 rounded-md items-center text-white w-full justify-center "
-                                    >
-                                      <LuLockKeyhole />
-                                      Reserve (Demo)
-                                    </button>
-                                    <p className="text-[10px] text-center font-medium text-gray-500">
-                                      You won't be charged until final Steps
-                                    </p>
-                                  </div>
-                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => setOpenBooking(false)}
+                                  className="bg-blue-700 p-2 flex gap-2 rounded-md items-center text-white w-full justify-center"
+                                >
+                                  <LuLockKeyhole />
+                                  Close Demo
+                                </button>
                               </div>
                             </div>
                           </div>

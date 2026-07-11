@@ -56,22 +56,25 @@ function LoginPage() {
           <div className="items-center flex justify-center lg:min-h-screen md:min-h-screen  ">
             <div className="w-full max-w-md bg-white lg:p-8 md:p-8 p-6.5 rounded-2xl lg:shadow-xl md:shadow-xl flex flex-col border-gray-200 md:border-2 lg:border-2">
               <h3 className="font-bold text-2xl">Welcome Back!</h3>
-              <p className="text-gray-400 text-[15px] font-medium lg:w-90  py-2">
+              <p className="text-amber-700 bg-amber-50 border border-amber-200 rounded-lg text-[13px] font-medium px-3 py-2 mt-2">
+                Demo login only. Do not use your real email or password.
+              </p>
+              <p className="text-gray-400 text-[15px] font-medium lg:w-90 py-2">
                 Login to your account to continue managing your events.
               </p>
               <div className="py-4">
                 <h2 className="font-bold text-[16px] pb-2">Email Address</h2>
                 <div className="flex gap-2 flex-col ">
                   <input
-                    placeholder="Email"
+                    placeholder="demo@evently.com (demo only)"
                     onChange={(e) => setEmail(e.target.value)}
                     className="p-3 border-gray-300 rounded-xl border"
                   />
-                  <h2 className="font-bold text-[16px] pt-3">Password</h2>
+                  <h2 className="font-bold text-[16px] pt-3">Demo Password</h2>
 
                   <input
                     type="password"
-                    placeholder="Password"
+                    placeholder="Demo password only"
                     onChange={(e) => setPassword(e.target.value)}
                     className="p-3 border-gray-300  rounded-xl border"
                   />

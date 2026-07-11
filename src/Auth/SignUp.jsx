@@ -48,6 +48,9 @@ function SignUp() {
           <div className="flex items-center justify-center lg:min-h-screen md:min-h-screen">
             <div className="w-full max-w-md bg-white lg:p-8 md:p-8 p-6.5 rounded-2xl lg:shadow-xl md:shadow-xl flex flex-col border-gray-200 lg:border-2 md:border-2">
               <h3 className="font-bold text-2xl">Create Account</h3>
+              <p className="text-amber-700 bg-amber-50 border border-amber-200 rounded-lg text-[13px] font-medium px-3 py-2 mt-2">
+                Demo signup only. Do not use your real email or password.
+              </p>
 
               <p className="text-gray-400 text-[15px] font-medium lg:w-90 py-2">
                 Create your account to start discovering and managing amazing
@@ -60,7 +63,7 @@ function SignUp() {
                   <h2 className="font-bold text-[16px] pb-2">User Name</h2>
 
                   <input
-                    placeholder="Enter your name"
+                    placeholder="Demo name"
                     onChange={(e) =>
                       setForm({
                         ...form,
@@ -76,7 +79,7 @@ function SignUp() {
                   <h2 className="font-bold text-[16px] pb-2">Email Address</h2>
 
                   <input
-                    placeholder="Enter your email"
+                    placeholder="demo@evently.com (demo only)"
                     onChange={(e) =>
                       setForm({
                         ...form,
@@ -89,11 +92,11 @@ function SignUp() {
 
                 {/* Password */}
                 <div>
-                  <h2 className="font-bold text-[16px] pb-2">Password</h2>
+                  <h2 className="font-bold text-[16px] pb-2">Demo Password</h2>
 
                   <input
                     type="password"
-                    placeholder="Create password"
+                    placeholder="Demo password only"
                     onChange={(e) =>
                       setForm({
                         ...form,

@@ -19,7 +19,7 @@ const Homepage = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto lg:pt-15 pt-21 md:pt-25">
+    <div className="max-w-7xl mx-auto lg:pt-15 pt-10 md:pt-25">
       <Navbar />
       <Herosection
         search={search}

@@ -15,10 +15,12 @@ import Dashboard from "./Pages/Dashboard";
 import UserPage from "./Pages/UserPage";
 import SettingsPage from "./Pages/SettingPage";
 import ProtectedRoute from "./Auth/ProtectedRoute";
+import DemoBanner from "./Component/DemoBanner";
 
 const App = () => {
   return (
     <div>
+      <DemoBanner />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />

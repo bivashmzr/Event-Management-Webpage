@@ -59,7 +59,7 @@ function Contactuspage() {
   return (
     <>
       <Navbar />
-      <div className="max-w-7xl mx-auto lg:flex mt-17  py-10 px-5">
+      <div className="max-w-7xl mx-auto lg:flex lg:mt-15 md:mt-10   py-10 px-5">
         <div className="lg:w-3/5 w-full px-3 ">
           <div className="flex flex-col ">
             <p className=" bg-[#EBEBFE] lg:text-[15px] text-[13px] flex justify-center font-bold text-[#4544E6] w-40 rounded-2xl px-2 py-1">

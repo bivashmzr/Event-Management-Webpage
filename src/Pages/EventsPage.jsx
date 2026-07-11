@@ -53,7 +53,7 @@ const EventsPage = () => {
     ${Isopening ? "opacity-100 visible" : "opacity-0 invisible"}`}
       />
       {/* Device view w-2/8 and w-5/6 */}
-      <div className="pt-4 pb-10 flex lg:flex-row md:flex-col flex-col mt-20   max-w-7xl mx-auto gap-3">
+      <div className="pt-4 pb-10 flex lg:flex-row md:flex-col flex-col lg:mt-15 md:mt-10 mt-3  max-w-7xl mx-auto gap-3">
         {/* Laptop Version Large - first container*/}
         <div className="lg:w-2/8 lg:block  hidden border-boundry mx-auto w-full">
           <div className="flex justify-between pb-4">

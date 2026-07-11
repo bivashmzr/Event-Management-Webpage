@@ -52,7 +52,7 @@ const Herosection = ({ search, setSearch, eventsData }) => {
 
   return (
     <div className="max-w-7xl mx-auto  px-4">
-      <div className="grid lg:grid-cols-2 gap-10 lg:pt-20 pt-5">
+      <div className="grid lg:grid-cols-2 gap-10 lg:pt-15 md:pt-15">
         {/* LEFT SECTION */}
         <div>
           <div className="bg-[#F2F6FE] px-3 py-1 rounded-xl w-fit flex items-center gap-2">
@@ -175,10 +175,10 @@ ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
               <MdLockOutline className="text-[#0C71FB] lg:text-3xl md:text-3xl text-4xl  border border-[#E4EEFD] rounded-full lg:w-10 p-1.5 bg-[#E4EEFD] " />
               <div>
                 <h3 className="font-bold whitespace-nowrap text-[17px] lg:text-[16px]">
-                  Secure Payments
+                  Quick Booking
                 </h3>
                 <p className="text-gray-600 text-[12px] lg:text-sm ">
-                  100% secure and safe payments
+                  Browse and reserve tickets in minutes
                 </p>
               </div>
             </div>
