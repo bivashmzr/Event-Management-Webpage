@@ -591,36 +591,11 @@ const EventDetails = () => {
                                       className="text-[10px] md:text-[14px] lg:text-[14px]"
                                     />
                                   </div>
-                                  <div className="flex lg:flex-row md:flex-row flex-col  lg:items-center md:items-center justify-between w-full lg:px-3 md:px-3">
-                                    <p className="flex flex-col md:flex-row lg:flex-row gap-1 lg:text-[13px] text-gray-500 text-[12px] ">
-                                      Secure payment powered by
-                                      <span className="font-bold lg:text-[13px]  text-[12px] text-black">
-                                        Razorpay
-                                      </span>
+                                  <div className="flex lg:flex-row md:flex-row flex-col lg:items-center md:items-center justify-between w-full lg:px-3 md:px-3">
+                                    <p className="text-gray-500 text-[12px] lg:text-[13px]">
+                                      Demo checkout — payment integration coming
+                                      soon. No card details are collected here.
                                     </p>
-
-                                    <div className="flex items-center gap-1">
-                                      <img
-                                        src="https://static.vecteezy.com/system/resources/thumbnails/020/975/570/small/visa-logo-visa-icon-transparent-free-png.png"
-                                        alt=""
-                                        className="w-full h-5 "
-                                      />
-                                      <img
-                                        src="https://www.logo.wine/a/logo/Mastercard/Mastercard-Logo.wine.svg"
-                                        alt=""
-                                        className="w-full h-5"
-                                      />
-                                      <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/RuPay.svg/1280px-RuPay.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
-                                        alt=""
-                                        className="w-full h-3 "
-                                      />
-                                      <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/1280px-UPI-Logo-vector.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
-                                        alt=""
-                                        className="w-full h-3 "
-                                      />
-                                    </div>
                                   </div>
                                 </div>
 
@@ -631,18 +606,20 @@ const EventDetails = () => {
                                     </div>
                                     <div>
                                       <p className="md:text-[16px] text-[13px] font-bold">
-                                        100% Secure Checkout
+                                        Demo Booking
                                       </p>
                                       <p className="font-medium md-text[13px] text-[10px]">
-                                        Your payment information is safce with
-                                        us
+                                        Preview only — you will not be charged
                                       </p>
                                     </div>
                                   </div>
                                   <div className="flex flex-col pt-4 md:pt-0 gap-1">
-                                    <button className="bg-blue-700 p-2 flex gap-2 rounded-md items-center text-white w-full justify-center ">
+                                    <button
+                                      type="button"
+                                      className="bg-blue-700 p-2 flex gap-2 rounded-md items-center text-white w-full justify-center "
+                                    >
                                       <LuLockKeyhole />
-                                      Pay ₹1,682
+                                      Reserve (Demo)
                                     </button>
                                     <p className="text-[10px] text-center font-medium text-gray-500">
                                       You won't be charged until final Steps

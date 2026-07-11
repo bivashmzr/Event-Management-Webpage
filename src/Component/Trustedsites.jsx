@@ -1,44 +1,31 @@
 import React from "react";
+import { Music, Mic2, Trophy, Palette, UtensilsCrossed } from "lucide-react";
 
 const Trustedsites = () => {
-  const brands = [
-    {
-      name: "Google",
-      img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
-    },
-    {
-      name: "Microsoft",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/1280px-Microsoft_logo_%282012%29.svg.png",
-    },
-    {
-      name: "Airbnb",
-      img: "https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg",
-    },
-    {
-      name: "Spotify",
-      img: "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg",
-    },
-    {
-      name: "Amazon",
-      img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-    },
+  const categories = [
+    { name: "Music", icon: Music },
+    { name: "Conferences", icon: Mic2 },
+    { name: "Sports", icon: Trophy },
+    { name: "Arts", icon: Palette },
+    { name: "Food & Drink", icon: UtensilsCrossed },
   ];
+
   return (
     <div className="max-w-7xl mx-auto pb-6 pt-15">
-      <div className="flex justify-center ">
-        <p className="text-[#2B7FFF] text-[13px] lg:text-[18px]  font-medium">
-          Trusted by thousands of organisers and attendes
+      <div className="flex justify-center">
+        <p className="text-[#2B7FFF] text-[13px] lg:text-[18px] font-medium">
+          Explore events across popular categories
         </p>
       </div>
       <div className="overflow-hidden">
-        <div className="marquee  flex justify-center lg:gap-13 gap-5 pb-6">
-          {brands.map((Event, idx) => (
-            <div key={idx} className="flex   flex-row lg:gap-10 py-8">
-              <img
-                src={Event.img}
-                alt=""
-                className=" lg:h-7 lg:w-25 h-5   object-contain"
-              />
+        <div className="marquee flex justify-center lg:gap-13 gap-5 pb-6">
+          {categories.map(({ name, icon: Icon }, idx) => (
+            <div
+              key={idx}
+              className="flex flex-row items-center gap-2 lg:gap-3 py-8 px-4 text-slate-600"
+            >
+              <Icon className="h-6 w-6 text-[#2B7FFF]" />
+              <span className="text-sm font-medium">{name}</span>
             </div>
           ))}
         </div>

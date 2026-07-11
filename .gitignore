@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Executables and installers (never host these in a web app)
+*.exe
+*.msi
+*.dmg
+*.apk
