@@ -76,9 +76,9 @@ const Herosection = ({ search, setSearch, eventsData }) => {
 
           <div className="py-6 w-full">
             <form onSubmit={handleForm}>
-              <div className="sm:w-130 lg:w-[100%] md:w-150   p-3 flex flex-col justify-between md:flex-row gap-2 items-center w-full">
+              <div className="sm:w-130 lg:w-full md:w-150   p-3 flex flex-col justify-between md:flex-row gap-2 items-center w-full">
                 {/* -----------------------Search selection------------- */}
-                <div className="flex gap-1.5 items-center bg-white border w-full lg:w-[24%] sm:w-full border-gray-500 rounded-xl p-2 px-3 hover:border hover:border-[#2B7FFF] duration-300 transition-all transform">
+                <div className="flex gap-1.5 items-center bg-white border w-full lg:w-[24%] sm:w-full border-gray-300 rounded-xl p-2 px-3 hover:border hover:border-[#2B7FFF] duration-300 transition-all transform">
                   <IoSearch fontSize={18} color="#6A7282" />
                   <input
                     type="text"
