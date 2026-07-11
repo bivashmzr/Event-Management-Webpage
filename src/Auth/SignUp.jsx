@@ -13,8 +13,10 @@ function SignUp() {
     password: "",
   });
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+
   const register = async () => {
-    await axios.post("http://localhost:8080/api/auth/register", form);
+    await axios.post(`${API_URL}/api/auth/register`, form);
 
     setMessage("Registration Successful");
   };
