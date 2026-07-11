@@ -19,14 +19,16 @@ const Homepage = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto lg:pt-15 pt-21 md:pt-25">
       <Navbar />
       <Herosection
         search={search}
         setSearch={setSearch}
         eventsData={eventsData}
       />
-      <h3 className="font-bold text-[23px] px-5 pt-11">Popular Events</h3>
+      <h3 className="font-extrabold text-[20px] px-5 pb-3  pt-11">
+        Popular Events
+      </h3>
       <Cards events={searchFilter} limit={6} />
       <Category />
       <Trustedsites />

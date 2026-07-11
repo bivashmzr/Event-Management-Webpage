@@ -11,6 +11,7 @@ import {
 } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
+import { CategoryFilterData } from "../Component/CateData";
 
 import { CiFilter } from "react-icons/ci";
 import Footer from "../Component/Footer.jsx";
@@ -84,18 +85,21 @@ const SearchLocalStorage = () => {
 
     setSearchFilter(filtered);
   }, [searchData]);
+  const mobileCategories = CategoryFilterData.slice(1, 7);
 
   return (
     <>
       <Navbar />
       {/* ---------------- Main Container ---------------- */}
-      <div className="max-w-7xl mx-auto px-5 pt-10 ">
+      <div className="max-w-7xl mx-auto lg:px-5 px-2 lg:mt-20 md:mt-22 mt-23 ">
         {/* Search Bar Results */}
         <div className="flex justify-between">
-          <div className="searchbar px-4 flex flex-col gap-1 justify-center">
+          <div className="searchbar mb-5  px-4 flex flex-col gap-1 justify-center">
             {/* ---------------- Heading ---------------- */}
-            <h1 className="text-3xl font-extrabold">Search Results</h1>
-            <p className="text-[15px] text-gray-700 font-medium">
+            <h1 className="lg:text-3xl text-xl font-extrabold">
+              Search Results
+            </h1>
+            <p className="lg:text-[15px] md:text-[18px] text-[15px] text-gray-700 font-medium">
               Discover events that match your interests
             </p>
           </div>
@@ -118,7 +122,7 @@ const SearchLocalStorage = () => {
               value={searchData.search}
               placeholder="Search events..."
               onChange={handleChnage}
-              className="  p-3 rounded-xl outline-none py-3  "
+              className="  p-3 rounded-xl outline-none py-2.5 lg:py-3 md:py-3  "
             />
           </div>
 
@@ -131,7 +135,7 @@ const SearchLocalStorage = () => {
               value={searchData.selectedLocation}
               placeholder="Location"
               onChange={handleChnage}
-              className=" p-3 rounded-xl outline-none  py-3  "
+              className=" p-3 rounded-xl outline-none  py-2.5 lg:py-3 md:py-3  "
             />
           </div>
 
@@ -144,86 +148,49 @@ const SearchLocalStorage = () => {
               name="selectedDate"
               value={searchData.selectedDate}
               onChange={handleChnage}
-              className=" p-3 rounded-xl outline-none  py-3 "
+              className=" p-3 rounded-xl outline-none  py-2.5 lg:py-3 md:py-3 "
             />
           </div>
         </div>
 
-        <div className="flex py-8 w-full px-5 gap-6">
+        <div className="flex lg:py-2 md:py-1 w-full lg:px-2 px-0 gap-6">
           <div className="w-[100%] flex justify-end flex-col">
-            <p className="py-3 text-[19px] font-bold">Categories</p>
-            <div className="flex gap-3">
-              <div className="items-center flex text-[20px] gap-2 border justify-center w-[10%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2">
-                <span className="border border-gray-50 rounded-full p-2  bg-[#F3F1FC]">
-                  <RiBarChartHorizontalLine fontSize={18} />
-                </span>
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  All
-                </p>
-              </div>
-              <div className="items-center flex text-[20px] gap-2 border justify-center w-[13%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2">
-                <span className="border border-gray-50 rounded-full p-2 bg-[#F0E6FE]">
-                  <IoMusicalNotesOutline fontSize={18} color="#925DF1" />
-                </span>
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  Music
-                </p>
-              </div>
-              <div className="items-center flex text-[20px] gap-2 border justify-center w-[16%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2">
-                <span className="border border-gray-50 rounded-full p-2  bg-[#FEF1E8]">
-                  <BsPersonWorkspace fontSize={18} color="#FC8537" />
-                </span>
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  Workshop
-                </p>
-              </div>
-              <div className="items-center flex text-[20px] gap-2 border justify-center w-[16%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2 ">
-                <span className="border border-gray-50 rounded-full p-2  bg-[#EAF9ED]">
-                  <BsCalendar2Week fontSize={18} color="#62B669" />
-                </span>
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  Buisness
-                </p>
-              </div>
-              <div className="items-center flex text-[20px] gap-2 border justify-center w-[17%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2 ">
-                <span className="border border-gray-50 rounded-full p-2  bg-[#E5F1FE]">
-                  <GrTechnology fontSize={18} color="#5497FA" />
-                </span>
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  Technology
-                </p>
-              </div>
-              <div className="items-center flex text-[20px] gap-2 border justify-center w-[14%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2">
-                <span className="border border-gray-50 rounded-full p-2  bg-[#FEE5F2]">
-                  <MdOutlineSportsSoccer fontSize={18} color="#EF6EAE" />
-                </span>
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  Sports
-                </p>
-              </div>
-              <div className="items-center flex text-[20px] gap-2 border px-3 w-[14%] rounded-2xl border-gray-200 active:scale-95 hover:border-[#2B7FFF] duration-300 transition-all transform ease-out shadow-md py-2 ">
-                <p className="text-[17px] font-bold hover:text-[#2B7FFF]">
-                  More
-                </p>
+            <p className="py-3 px-4 text-[19px] font-bold">Categories</p>
+            {/* icons Different */}
+            <div className="block lg:hidden mb-5">
+              <div className="flex justify-between md:justify-center md:gap-10 w-full md:mt-1 mt-2  px-4">
+                {mobileCategories.map((value) => (
+                  <div className=" flex flex-col gap-2 items-center">
+                    <div
+                      className={`shadow-md border w-max p-4 active:scale-90 transition-transform duration-300 rounded-full ${value.iconcolor}`}
+                    >
+                      {value.icon}
+                    </div>
+                    <span className="text-[13px] font-semibold">
+                      {value.title}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="px-8">
-          <div className="flex w-full justify-between">
-            <div className=" py-2 flex gap-6">
-              <div className="w-[40%]">
+        <div className="lg:px-8 px-5">
+          <div className="lg:flex-row flex flex-col w-full justify-between">
+            <div className=" py-2 flex md:gap-10 md:flex-row lg:flex-row flex-col  lg:gap-6 lg:w-full">
+              <div className="lg:w-[50%] md:w-[50%] ">
                 <RangeSlider value={priceRange} setValue={setPriceRange} />
               </div>
-              <div className="flex w-[50%] gap-3  items-center ">
+              {/* Price value 0 to 5000+ */}
+              <div className="flex lg:w-[50%] md:w-[50%]  gap-3  items-center ">
                 <input
                   type="number"
                   value={priceRange[0] === 0 ? "" : priceRange[0]}
                   onChange={(e) =>
                     setPriceRange([Number(e.target.value), priceRange[1]])
                   }
-                  className="max-w-[40%] border border-gray-300 rounded-md p-3 text-[15px] font-bold"
+                  className="lg:w-full md:w-full w-[45%] border border-gray-300 rounded-md p-3 text-[15px] font-bold"
                   placeholder="₹ 0"
                 />
                 <p className="font-bold text-[15px]">to</p>
@@ -233,122 +200,127 @@ const SearchLocalStorage = () => {
                   onChange={(e) =>
                     setPriceRange([priceRange[0], Number(e.target.value)])
                   }
-                  className="max-w-[40%] border border-gray-300 rounded-md p-3 text-[15px] font-bold"
+                  className="lg:w-full md:w-full w-[45%]  border border-gray-300 rounded-md p-3 text-[15px] font-bold"
                   placeholder="₹ 5000+"
                 />
-              </div>
-            </div>
-
-            <div className="flex">
-              <div className="flex items-center ">
-                {/* --------------Sorting most relevent dropdown menu------------------  */}
-                <div className="border border-gray-300 flex p-2 gap-3 rounded-xl items-center  relative w-70 px-3">
-                  <p className="font-md text-gray-500 text-[16px]">Sort By:</p>
-
-                  <div className="w-45">
-                    <div
-                      onClick={() => setIsSortopen(!IsSortopen)}
-                      className="flex items-center justify-between  cursor-pointer"
-                    >
-                      <p>{Sorttext || "Most Relevent"}</p>
-                      {IsSortopen ? (
-                        <RiArrowDropUpLine size={30} />
-                      ) : (
-                        <RiArrowDropDownLine size={30} />
-                      )}
-                    </div>
-                    {IsSortopen && (
-                      <div className="flex flex-col absolute overflow-y-scroll bg-white top-13  z-1 w-49 gap-1 left-20  border rounded-md border-gray-300 h-40 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-                        <p
-                          onClick={() => {
-                            setSorttext("Most Relevent");
-                            setIsSortopen(false);
-                          }}
-                          className={`text-gray-500 cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
-                            Sorttext == "Most Relevent"
-                              ? "bg-indigo-50 text-indigo-600 font-medium"
-                              : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                          }`}
-                        >
-                          Most Relevent
-                        </p>
-                        <p
-                          onClick={() => {
-                            setSorttext("Upcoming Soon");
-                            setIsSortopen(false);
-                          }}
-                          className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
-                            Sorttext == "Upcoming Soon"
-                              ? "bg-indigo-50 text-indigo-600 font-medium"
-                              : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                          }`}
-                        >
-                          upcoming Soon
-                        </p>
-                        <p
-                          onClick={() => {
-                            setSorttext("Most Popular");
-                            setIsSortopen(false);
-                          }}
-                          className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
-                            Sorttext === "Most Popular"
-                              ? "bg-indigo-50 text-indigo-600 font-medium"
-                              : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                          }`}
-                        >
-                          Most Popular
-                        </p>
-                        <p
-                          onClick={() => {
-                            setSorttext("Newest First");
-                            setIsSortopen(false);
-                          }}
-                          className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
-                            Sorttext === "Newest First"
-                              ? "bg-indigo-50 text-indigo-600 font-medium"
-                              : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                          }`}
-                        >
-                          Newest First
-                        </p>
-                        <p
-                          onClick={() => {
-                            setSorttext("Price: Low to High");
-                            setIsSortopen(false);
-                          }}
-                          className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
-                            Sorttext === "Price: Low to High"
-                              ? "bg-indigo-50 text-indigo-600 font-medium"
-                              : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                          }`}
-                        >
-                          Price: Low to High
-                        </p>
-                        <p
-                          onClick={() => {
-                            setSorttext("Price: High to Low");
-                            setIsSortopen(false);
-                          }}
-                          className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
-                            Sorttext === "Price: High to Low"
-                              ? "bg-indigo-50 text-indigo-600 font-medium"
-                              : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                          }`}
-                        >
-                          Price: High to Low
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
         {/* ---------------- Events Count ---------------- */}
-        <h2 className="text-xl font-semibold mb-6 px-4">
-          {filteredPriceEvents.length} Events Found
-        </h2>
+        <div className="flex items-center mb-2 sm:mt-3 md:mt-2   justify-between pr-6 pl-2">
+          <h2 className="lg:text-xl text-[17px] font-semibold justify-center  px-4">
+            {filteredPriceEvents.length} Events Found
+          </h2>
+
+          {/* Most relevent section */}
+          <div className="hidden md:block lg:block">
+            <div className="flex  items-center w-max">
+              {/* --------------Sorting most relevent dropdown menu------------------  */}
+              <div className="border border-gray-300 justify-center flex lg:p-1  md:p-1  lg:gap-3 md:gap-3 gap-2 rounded-xl items-center  relative lg:w-70 md:w-full w-48 lg:px-3 md:px-3 px-1.5">
+                <p className="font-md text-gray-500 lg:text-[16px] text-[13px]">
+                  Sort By:
+                </p>
+
+                <div className="lg:w-45 md:w-45 w-29">
+                  <div
+                    onClick={() => setIsSortopen(!IsSortopen)}
+                    className="flex items-center justify-between lg:text-[15px] text-[13px] cursor-pointer"
+                  >
+                    <p>{Sorttext || "Most Relevent"}</p>
+                    {IsSortopen ? (
+                      <RiArrowDropUpLine size={30} />
+                    ) : (
+                      <RiArrowDropDownLine size={30} />
+                    )}
+                  </div>
+                  {IsSortopen && (
+                    <div className="flex flex-col absolute overflow-y-scroll bg-white top-13  z-1 w-49 gap-1 left-20  border rounded-md border-gray-300 h-40 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                      <p
+                        onClick={() => {
+                          setSorttext("Most Relevent");
+                          setIsSortopen(false);
+                        }}
+                        className={`text-gray-500 cursor-pointer   p-1 duration-300 transition-all  px-3 pt-2 ${
+                          Sorttext == "Most Relevent"
+                            ? "bg-indigo-50 text-indigo-600 font-medium"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+                      >
+                        Most Relevent
+                      </p>
+                      <p
+                        onClick={() => {
+                          setSorttext("Upcoming Soon");
+                          setIsSortopen(false);
+                        }}
+                        className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
+                          Sorttext == "Upcoming Soon"
+                            ? "bg-indigo-50 text-indigo-600 font-medium"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+                      >
+                        upcoming Soon
+                      </p>
+                      <p
+                        onClick={() => {
+                          setSorttext("Most Popular");
+                          setIsSortopen(false);
+                        }}
+                        className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
+                          Sorttext === "Most Popular"
+                            ? "bg-indigo-50 text-indigo-600 font-medium"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+                      >
+                        Most Popular
+                      </p>
+                      <p
+                        onClick={() => {
+                          setSorttext("Newest First");
+                          setIsSortopen(false);
+                        }}
+                        className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
+                          Sorttext === "Newest First"
+                            ? "bg-indigo-50 text-indigo-600 font-medium"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+                      >
+                        Newest First
+                      </p>
+                      <p
+                        onClick={() => {
+                          setSorttext("Price: Low to High");
+                          setIsSortopen(false);
+                        }}
+                        className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
+                          Sorttext === "Price: Low to High"
+                            ? "bg-indigo-50 text-indigo-600 font-medium"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+                      >
+                        Price: Low to High
+                      </p>
+                      <p
+                        onClick={() => {
+                          setSorttext("Price: High to Low");
+                          setIsSortopen(false);
+                        }}
+                        className={` cursor-pointer  p-1 duration-300 transition-all  px-3 pt-2 ${
+                          Sorttext === "Price: High to Low"
+                            ? "bg-indigo-50 text-indigo-600 font-medium"
+                            : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                        }`}
+                      >
+                        Price: High to Low
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="w-[100%]">
           {/* ---------------- Cards Grid ---------------- */}
 

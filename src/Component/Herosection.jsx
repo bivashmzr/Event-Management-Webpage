@@ -51,21 +51,23 @@ const Herosection = ({ search, setSearch, eventsData }) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="grid lg:grid-cols-2 gap-10 pt-20">
+    <div className="max-w-7xl mx-auto  px-4">
+      <div className="grid lg:grid-cols-2 gap-10 lg:pt-20 pt-5">
         {/* LEFT SECTION */}
         <div>
           <div className="bg-[#F2F6FE] px-3 py-1 rounded-xl w-fit flex items-center gap-2">
             <FontAwesomeIcon icon={faCommentDots} className="text-[#2B7FFF]" />
-            <p className="font-medium text-[16px]">Discover. Book. Enjoy.</p>
+            <p className="font-medium text-[13px] lg:text-[16px] md:text-[16px]">
+              Discover. Book. Enjoy.
+            </p>
           </div>
 
-          <h3 className="font-bold tracking-tight text-4xl lg:text-5xl pt-6 max-w-xl">
+          <h3 className="font-bold  text-[28px] lg:text-[49px] md:text-5xl lg:leading-14.5 md:leading-15 leading-9   pt-6 max-w-xl w-80 md:w-140 lg:w-140">
             Find The Best Events Near
             <span className="text-[#2B7FFF]"> You</span>
           </h3>
 
-          <p className="text-[16px] pt-3 text-gray-600 font-medium max-w-lg">
+          <p className="text-[15px]  lg:text-[19px]  pt-2 lg:pt-3 text-gray-500 font-medium max-w-lg">
             Explore concerts, workshops, conferences and more amazing events
             happening around you
           </p>
@@ -76,7 +78,7 @@ const Herosection = ({ search, setSearch, eventsData }) => {
             <form onSubmit={handleForm}>
               <div className="sm:w-130 lg:w-[100%] md:w-150   p-3 flex flex-col justify-between md:flex-row gap-2 items-center w-full">
                 {/* -----------------------Search selection------------- */}
-                <div className="flex gap-1.5 items-center sm:border lg:w-[24%] sm:w-full border-gray-300 rounded-xl p-2 px-3 hover:border hover:border-[#2B7FFF] duration-300 transition-all transform">
+                <div className="flex gap-1.5 items-center bg-white border w-full lg:w-[24%] sm:w-full border-gray-500 rounded-xl p-2 px-3 hover:border hover:border-[#2B7FFF] duration-300 transition-all transform">
                   <IoSearch fontSize={18} color="#6A7282" />
                   <input
                     type="text"
@@ -91,13 +93,15 @@ const Herosection = ({ search, setSearch, eventsData }) => {
 
                 <div
                   onClick={() => setOpen(!open)}
-                  className="flex items-center gap-1.5 relative  group sm:border sm:w-full md:w-40 lg:w-[28%]  border-gray-300 rounded-xl p-2  hover:border hover:border-[#2B7FFF] duration-300 transition-all transform "
+                  className="flex items-center gap-1.5 relative  group border w-full md:w-40 lg:w-[28%]  border-gray-300 rounded-xl p-2  hover:border hover:border-[#2B7FFF] duration-300 transition-all transform "
                 >
                   <IoLocationOutline fontSize={18} color="#6A7282" />
-                  <p className="text-gray-500 flex items-center whitespace-nowrap">
-                    {selectedLocation || "Location"}
-                  </p>
-                  <RiArrowDropDownLine size={25} color="#6A7282" />
+                  <div className="flex justify-between w-full">
+                    <p className="text-gray-500 flex items-center whitespace-nowrap">
+                      {selectedLocation || "Location"}
+                    </p>
+                    <RiArrowDropDownLine size={25} color="#6A7282" />
+                  </div>
 
                   {open && (
                     <div
@@ -133,7 +137,7 @@ ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
 
                 {/*-------------------- Selected Date-------------------- */}
 
-                <div className="flex gap-1.5 items-center  sm:border sm:p-2 sm:w-full lg:w-[23%] border-gray-300 rounded-xl  lg:p-1  lg:px-3 md:p-1.5 hover:border hover:border-[#2B7FFF] duration-300 transition-all transform ">
+                <div className="flex gap-1.5 items-center  border p-2  w-full lg:w-[23%] border-gray-300 rounded-xl  lg:p-1  lg:px-3 md:p-1.5 hover:border hover:border-[#2B7FFF] duration-300 transition-all transform ">
                   <LuCalendarSearch className="lg:text-[33px] sm:text-[20px] md:text-[28px] text-gray-500" />
                   <DatePicker
                     className="outline-0 z-10 w-full"
@@ -146,7 +150,7 @@ ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
 
                 {/*--------------------- Button Homepage ---------------- */}
 
-                <button className="bg-[#2B7FFF] px-6 py-2.5 active:scale-95 duration-300 transition-all transform rounded-xl text-white shrink-0 lg:w-[20%] sm:w-full md:w-29">
+                <button className="bg-[#2B7FFF] px-6 py-2.5 active:scale-95 duration-300 transition-all transform rounded-xl text-white shrink-0 lg:w-[20%] w-full md:w-29">
                   Search
                 </button>
               </div>
@@ -154,32 +158,38 @@ ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
           </div>
 
           {/* FEATURES */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-6 pt-3">
-            <div className="flex gap-2">
-              <IoTicketOutline className="text-[#2B7FFF] text-3xl" />
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-[1.2fr_1fr_1fr] gap-4 pl-4   max-w-2xl ">
+            <div className="flex gap-2  border-r border-gray-200 pr-3 ">
+              <IoTicketOutline className="text-[#0C71FB] lg:text-3xl md:text-3xl text-4xl border lg:w-10 border-[#E4EEFD] rounded-full p-1.5 bg-[#E4EEFD]  " />
               <div>
-                <h3 className="font-bold">Easy Booking</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-bold text-[17px] lg:text-[16px]">
+                  Easy Booking
+                </h3>
+                <p className="text-gray-600 text-[12px] lg:text-sm  font-medium">
                   Book your tickets in just a few clicks
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-2">
-              <MdLockOutline className="text-[#2B7FFF] text-3xl" />
+            <div className="flex gap-2 border-r border-gray-200 pr-3 ">
+              <MdLockOutline className="text-[#0C71FB] lg:text-3xl md:text-3xl text-4xl  border border-[#E4EEFD] rounded-full lg:w-10 p-1.5 bg-[#E4EEFD] " />
               <div>
-                <h3 className="font-bold whitespace-nowrap">Secure Payments</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-bold whitespace-nowrap text-[17px] lg:text-[16px]">
+                  Secure Payments
+                </h3>
+                <p className="text-gray-600 text-[12px] lg:text-sm ">
                   100% secure and safe payments
                 </p>
               </div>
             </div>
 
             <div className="flex gap-2">
-              <BiSupport className="text-[#2B7FFF] text-3xl" />
+              <BiSupport className="text-[#0C71FB] lg:text-3xl md:text-3xl text-4xl border border-[#E4EEFD] rounded-full  p-1.5 bg-[#E4EEFD] " />
               <div>
-                <h3 className="font-bold">24/7 Support</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-bold text-[17px] lg:text-[16px]">
+                  24/7 Support
+                </h3>
+                <p className="text-gray-600 text-[12px] lg:text-sm  lg:w-30">
                   We're here to help you anytime
                 </p>
               </div>

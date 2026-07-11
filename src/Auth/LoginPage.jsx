@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import img7 from "../assets/Image/image7.png";
 import { Link } from "react-router-dom";
+import { GoArrowLeft } from "react-icons/go";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -37,15 +38,27 @@ function LoginPage() {
 
   return (
     <>
-      <div className=" mx-auto gap-4 flex ">
-        <div className="w-[50%] items-center flex justify-center   min-h-screen">
-          <img src={img7} alt="" className="w-[75%] flex " />
+      <div className=" max-w-7xl mx-auto gap-4 flex flex-col lg:flex-row lg:bg-[#EDF0FA] bg-white ">
+        <div className="flex flex-col">
+          <div className="">
+            <Link to="/">
+              <div className=" text-[#58A5FC] border  items-center bg-[#EFF6FF] gap-1 justify-center flex text-[14px] px-2 rounded-2xl  w-max mt-5 mx-5">
+                <GoArrowLeft />
+                <p>Back to Home</p>
+              </div>
+            </Link>
+          </div>
+          <div className="hidden lg:block">
+            <div className="lg:w-full  items-center flex justify-center   lg:min-h-screen">
+              <img src={img7} alt="" className="w-[75%] flex " />
+            </div>
+          </div>
         </div>
-        <div className="w-[40%]">
-          <div className="items-center flex justify-center min-h-screen  ">
-            <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-xl flex flex-col border-gray-200 border-2">
+        <div className="lg:w-[40%] ">
+          <div className="items-center flex justify-center lg:min-h-screen md:min-h-screen  ">
+            <div className="w-full max-w-md bg-white lg:p-8 md:p-8 p-6.5 rounded-2xl lg:shadow-xl md:shadow-xl flex flex-col border-gray-200 md:border-2 lg:border-2">
               <h3 className="font-bold text-2xl">Welcome Back!</h3>
-              <p className="text-gray-400 text-[15px] font-medium w-90 py-2">
+              <p className="text-gray-400 text-[15px] font-medium lg:w-90  py-2">
                 Login to your account to continue managing your events.
               </p>
               <div className="py-4">

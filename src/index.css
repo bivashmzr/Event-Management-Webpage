@@ -1,15 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import "tailwindcss";
 
 body {
   font-family: "Manrope", sans-serif;
 }
 
-
-
-.border-boundry{
-
-  @apply border border-gray-300 rounded-2xl py-5 p-2 mt-4 
-
+.border-boundry {
+  @apply border border-gray-300 rounded-2xl py-5 p-2 mt-4;
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
+.marquee {
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(50%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
